@@ -1052,12 +1052,50 @@ a {
 
 .legal-hero {
   padding: 42px;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03)),
+    linear-gradient(135deg, rgba(13, 22, 39, 0.96), rgba(7, 11, 18, 0.94));
+}
+
+.legal-hero::after {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(180, 217, 255, 0.12), transparent 20rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 26%);
+  content: "";
+  pointer-events: none;
 }
 
 .legal-hero p {
   max-width: 920px;
   margin-top: 18px;
   font-size: 1.04rem;
+}
+
+.legal-pills {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.legal-pills span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid rgba(197, 223, 255, 0.14);
+  border-radius: 999px;
+  color: rgba(238, 243, 251, 0.76);
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .legal-grid {
@@ -1070,7 +1108,12 @@ a {
 .legal-card {
   position: relative;
   padding: 28px;
-  background: rgba(255, 255, 255, 0.045);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
+    rgba(255, 255, 255, 0.03);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 18px 36px rgba(0, 0, 0, 0.14);
 }
 
 .legal-card::after {
@@ -1099,6 +1142,12 @@ a {
 
 .legal-card a {
   color: var(--accent);
+}
+
+.legal-card:nth-child(2) {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025)),
+    linear-gradient(135deg, rgba(12, 20, 35, 0.92), rgba(7, 11, 18, 0.88));
 }
 
 @keyframes heroReveal {
