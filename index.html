@@ -3,71 +3,156 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Aether Focus is a premium focus app with NFC Anchor rituals, Screen Time support, and constellation-style study proof.">
     <title>Aether Focus</title>
-    <style>
-      :root {
-        color-scheme: dark;
-        --bg: #090b12;
-        --text: #f4f7fb;
-        --muted: #aab5c5;
-        --line: #273244;
-        --accent: #9fd3ff;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        background: radial-gradient(circle at 18% 0%, #18243a 0, transparent 32rem), var(--bg);
-        color: var(--text);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        line-height: 1.6;
-      }
-
-      main {
-        width: min(52rem, calc(100% - 2rem));
-        margin: 0 auto;
-        padding: 4rem 0;
-      }
-
-      h1 {
-        margin: 0 0 1rem;
-        font-size: clamp(2.25rem, 8vw, 4.5rem);
-        line-height: 1.15;
-      }
-
-      p {
-        color: var(--muted);
-        max-width: 42rem;
-      }
-
-      nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-        border-top: 1px solid var(--line);
-        margin-top: 2rem;
-        padding-top: 1.5rem;
-      }
-
-      a {
-        color: var(--accent);
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="stars.js" defer></script>
   </head>
   <body>
+    <canvas class="star-canvas" data-starfield aria-hidden="true"></canvas>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Aether Focus home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Aether Focus</span>
+      </a>
+      <div class="nav-links">
+        <a href="#anchor">NFC Anchor</a>
+        <a href="#constellation">Constellation</a>
+        <a href="privacy.html">Privacy</a>
+        <a class="nav-cta" href="support.html">Support</a>
+      </div>
+    </nav>
+
     <main>
-      <h1>Aether Focus</h1>
-      <p>
-        Aether Focus is a paid focus app for study and deep work, with optional NFC Anchor setup
-        and constellation-style focus history.
-      </p>
-      <nav>
+      <section class="hero" data-spotlight>
+        <div class="hero-base" aria-hidden="true"></div>
+        <div class="hero-reveal" aria-hidden="true"></div>
+        <div class="hero-scrim" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="kicker">Premium focus app</p>
+          <h1>Turn focus into a constellation.</h1>
+          <p class="hero-copy">
+            Tap your NFC Anchor, put the phone aside, and build visible proof from real study time.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#ritual">See the ritual</a>
+            <a class="button secondary" href="privacy.html">Privacy policy</a>
+          </div>
+        </div>
+        <div class="hero-panel glass-panel">
+          <span class="panel-label">Session proof</span>
+          <strong>Deep Space Focus</strong>
+          <p>Completed sessions become stars in your focus history.</p>
+        </div>
+      </section>
+
+      <section class="section split" id="ritual">
+        <div>
+          <h2>A real object marks the start.</h2>
+        </div>
+        <div class="ritual-list">
+          <article>
+            <span>Tap</span>
+            <p>Pair your own writable NFC tag, card, sticker, or compatible NFC case.</p>
+          </article>
+          <article>
+            <span>Breathe</span>
+            <p>Use the physical Anchor as a small threshold before deep work begins.</p>
+          </article>
+          <article>
+            <span>Return</span>
+            <p>End an NFC-started session by coming back to the same Anchor.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section feature-band" id="anchor">
+        <div class="orbital-card">
+          <div class="anchor-orbit" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div>
+            <h2>Make focus physical.</h2>
+            <p>
+              Aether Focus works without NFC, but a real Anchor gives your focus session a clear
+              beginning and ending point on the desk.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section constellation" id="constellation">
+        <div class="constellation-copy">
+          <h2>Proof you can see.</h2>
+          <p>
+            Every completed session becomes part of a visual record. The app is not just another
+            timer. It turns hard study days into a map you can come back to.
+          </p>
+        </div>
+        <div class="constellation-map" aria-hidden="true">
+          <span class="star s1"></span>
+          <span class="star s2"></span>
+          <span class="star s3"></span>
+          <span class="star s4"></span>
+          <span class="star s5"></span>
+          <svg viewBox="0 0 420 280" role="img" aria-label="Abstract constellation lines">
+            <path d="M62 198 L126 116 L204 154 L282 78 L360 132" />
+            <path d="M126 116 L174 42 L282 78" />
+            <path d="M204 154 L246 226 L360 132" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="section capabilities">
+        <div class="capability-lead">
+          <h2>Built for serious study.</h2>
+          <p>
+            One-time paid app. No ads. No subscription. Local-first by design.
+          </p>
+        </div>
+        <div class="capability-grid">
+          <article>
+            <h3>Deep Space Focus Mode</h3>
+            <p>Strict focus sessions for exam preparation and long-form work.</p>
+          </article>
+          <article>
+            <h3>Focus Mode</h3>
+            <p>Custom restrictions for apps, categories, or websites where iOS supports it.</p>
+          </article>
+          <article>
+            <h3>25 to 180 minutes</h3>
+            <p>Choose a target that matches the size of the work in front of you.</p>
+          </article>
+          <article>
+            <h3>Honest history</h3>
+            <p>Force-ended sessions are recorded differently from completed focus proof.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section review-strip">
+        <div>
+          <h2>Review-ready privacy.</h2>
+          <p>
+            Aether Focus does not require an account, does not show ads, and does not collect your
+            focus history on our servers.
+          </p>
+        </div>
+        <div class="review-links">
+          <a class="button primary" href="privacy.html">Read privacy</a>
+          <a class="button secondary" href="support.html">Get support</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Aether Focus</span>
+      <div>
         <a href="privacy.html">Privacy Policy</a>
         <a href="support.html">Support</a>
-      </nav>
-    </main>
+      </div>
+    </footer>
   </body>
 </html>
