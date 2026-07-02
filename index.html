@@ -3,20 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Aether Focus is a premium focus app with NFC Anchor rituals, Screen Time support, and constellation-style study proof.">
+    <meta
+      name="description"
+      content="Aether Focus is a premium paid focus app with NFC Anchor rituals, real session proof, and constellation-style focus history."
+    >
     <title>Aether Focus</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="stars.js" defer></script>
+    <link rel="stylesheet" href="styles-v2.css">
+    <script src="stars-v2.js" defer></script>
   </head>
   <body>
     <canvas class="star-canvas" data-starfield aria-hidden="true"></canvas>
     <nav class="site-nav" aria-label="Main navigation">
       <a class="brand" href="index.html" aria-label="Aether Focus home">
         <span class="brand-mark" aria-hidden="true"></span>
-        <span>Aether Focus</span>
+        <span class="brand-wordmark">Aether Focus</span>
       </a>
       <div class="nav-links">
-        <a href="#anchor">NFC Anchor</a>
+        <a href="#anchor">Anchor</a>
         <a href="#constellation">Constellation</a>
         <a href="privacy.html">Privacy</a>
         <a class="nav-cta" href="support.html">Support</a>
@@ -28,86 +31,151 @@
         <div class="hero-base" aria-hidden="true"></div>
         <div class="hero-reveal" aria-hidden="true"></div>
         <div class="hero-scrim" aria-hidden="true"></div>
-        <div class="hero-content">
+
+        <div class="hero-copy-shell">
           <p class="kicker">Premium focus app</p>
-          <h1>Turn focus into a constellation.</h1>
+          <h1>
+            Make focus
+            <span>feel real.</span>
+          </h1>
           <p class="hero-copy">
-            Tap your NFC Anchor, put the phone aside, and build visible proof from real study time.
+            Aether Focus starts with a physical anchor on your desk, locks attention into a
+            session, and turns finished work into a constellation you can actually come back to.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#ritual">See the ritual</a>
+            <a class="button primary" href="#anchor">See the anchor</a>
             <a class="button secondary" href="privacy.html">Privacy policy</a>
           </div>
         </div>
-        <div class="hero-panel glass-panel">
-          <span class="panel-label">Session proof</span>
-          <strong>Deep Space Focus</strong>
-          <p>Completed sessions become stars in your focus history.</p>
-        </div>
+
+        <aside class="device-stage" aria-label="Aether Focus product scene">
+          <div class="focus-object-card glass-panel">
+            <span class="panel-label">Physical start point</span>
+            <strong>NFC Anchor</strong>
+            <p>Tap the same desk object to begin and to close the session.</p>
+            <div class="anchor-chip" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <div class="phone-frame glass-panel">
+            <div class="phone-camera" aria-hidden="true">
+              <span></span>
+            </div>
+            <div class="phone-screen">
+              <div class="screen-header">
+                <span class="screen-pill">Deep Space Focus</span>
+                <span class="screen-time">52:14</span>
+              </div>
+              <div class="screen-ring" aria-hidden="true">
+                <span class="ring-core"></span>
+                <span class="orbit orbit-a"></span>
+                <span class="orbit orbit-b"></span>
+              </div>
+              <div class="screen-meta">
+                <div>
+                  <span class="meta-label">Anchor state</span>
+                  <strong>Connected</strong>
+                </div>
+                <div>
+                  <span class="meta-label">Today</span>
+                  <strong>3 completed stars</strong>
+                </div>
+              </div>
+              <div class="screen-constellation" aria-hidden="true">
+                <span class="mini-star m1"></span>
+                <span class="mini-star m2"></span>
+                <span class="mini-star m3"></span>
+                <span class="mini-star m4"></span>
+                <svg viewBox="0 0 220 120" role="img" aria-label="Constellation trace">
+                  <path d="M24 88 L74 44 L116 58 L162 26 L196 72" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </aside>
       </section>
 
-      <section class="section split" id="ritual">
-        <div>
-          <h2>A real object marks the start.</h2>
+      <section class="section split intro-strip" id="ritual">
+        <div class="section-heading">
+          <p class="eyebrow">Real ritual</p>
+          <h2>A timer is easy to ignore. A desk object is not.</h2>
+          <p>
+            The product should read less like productivity software and more like a deliberate
+            physical ritual. That is the point of the anchor.
+          </p>
         </div>
         <div class="ritual-list">
           <article>
-            <span>Tap</span>
-            <p>Pair your own writable NFC tag, card, sticker, or compatible NFC case.</p>
+            <span>01</span>
+            <p>Pair your own writable NFC tag, sticker, card, or compatible case.</p>
           </article>
           <article>
-            <span>Breathe</span>
-            <p>Use the physical Anchor as a small threshold before deep work begins.</p>
+            <span>02</span>
+            <p>Tap before work starts so the session has a clean beginning on the desk.</p>
           </article>
           <article>
-            <span>Return</span>
-            <p>End an NFC-started session by coming back to the same Anchor.</p>
+            <span>03</span>
+            <p>Return to the same anchor to close the loop instead of drifting out of focus.</p>
           </article>
         </div>
       </section>
 
-      <section class="section feature-band" id="anchor">
-        <div class="orbital-card">
-          <div class="anchor-orbit" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div>
-            <h2>Make focus physical.</h2>
+      <section class="section anchor-section" id="anchor">
+        <div class="anchor-stage glass-panel">
+          <div class="anchor-stage-copy">
+            <p class="eyebrow">NFC Anchor</p>
+            <h2>Make the start of focus tangible.</h2>
             <p>
-              Aether Focus works without NFC, but a real Anchor gives your focus session a clear
-              beginning and ending point on the desk.
+              Aether Focus still works without NFC, but the physical anchor is the product's most
+              distinctive behavior. It creates a real threshold between normal phone use and deep
+              work.
             </p>
+            <ul class="fact-list">
+              <li>Works with writable NFC tags, desk stickers, cards, and compatible NFC cases.</li>
+              <li>No account or cloud setup required to use the ritual.</li>
+              <li>Fits both exam prep sessions and daily focused work blocks.</li>
+            </ul>
+          </div>
+          <div class="anchor-sculpture" aria-hidden="true">
+            <div class="anchor-disc anchor-disc-large"></div>
+            <div class="anchor-disc anchor-disc-mid"></div>
+            <div class="anchor-disc anchor-disc-small"></div>
+            <div class="anchor-pulse"></div>
           </div>
         </div>
       </section>
 
-      <section class="section constellation" id="constellation">
+      <section class="section constellation-section" id="constellation">
         <div class="constellation-copy">
-          <h2>Proof you can see.</h2>
+          <p class="eyebrow">Constellation proof</p>
+          <h2>Finished focus becomes a map, not just a log.</h2>
           <p>
-            Every completed session becomes part of a visual record. The app is not just another
-            timer. It turns hard study days into a map you can come back to.
+            Every completed session becomes visible proof. That matters because focus is usually
+            invisible, and invisible effort is easy to dismiss or forget.
           </p>
         </div>
-        <div class="constellation-map" aria-hidden="true">
+        <div class="constellation-stage glass-panel" aria-hidden="true">
           <span class="star s1"></span>
           <span class="star s2"></span>
           <span class="star s3"></span>
           <span class="star s4"></span>
           <span class="star s5"></span>
-          <svg viewBox="0 0 420 280" role="img" aria-label="Abstract constellation lines">
-            <path d="M62 198 L126 116 L204 154 L282 78 L360 132" />
-            <path d="M126 116 L174 42 L282 78" />
-            <path d="M204 154 L246 226 L360 132" />
+          <span class="star s6"></span>
+          <svg viewBox="0 0 480 280" role="img" aria-label="Abstract focus constellation">
+            <path d="M44 198 L118 134 L208 164 L286 92 L366 142 L434 88" />
+            <path d="M118 134 L172 52 L286 92" />
+            <path d="M208 164 L250 230 L366 142" />
           </svg>
         </div>
       </section>
 
-      <section class="section capabilities">
-        <div class="capability-lead">
-          <h2>Built for serious study.</h2>
+      <section class="section capability-shell">
+        <div class="section-heading capability-heading">
+          <p class="eyebrow">Core app</p>
+          <h2>Premium from the first open.</h2>
           <p>
             One-time paid app. No ads. No subscription. Local-first by design.
           </p>
@@ -115,7 +183,7 @@
         <div class="capability-grid">
           <article>
             <h3>Deep Space Focus Mode</h3>
-            <p>Strict focus sessions for exam preparation and long-form work.</p>
+            <p>Strict focus sessions built for exam preparation and long-form work.</p>
           </article>
           <article>
             <h3>Focus Mode</h3>
@@ -123,18 +191,19 @@
           </article>
           <article>
             <h3>25 to 180 minutes</h3>
-            <p>Choose a target that matches the size of the work in front of you.</p>
+            <p>Choose a target that matches the real size of the work in front of you.</p>
           </article>
           <article>
             <h3>Honest history</h3>
-            <p>Force-ended sessions are recorded differently from completed focus proof.</p>
+            <p>Force-ended sessions are recorded differently from finished focus proof.</p>
           </article>
         </div>
       </section>
 
       <section class="section review-strip">
         <div>
-          <h2>Review-ready privacy.</h2>
+          <p class="eyebrow">Review-ready pages</p>
+          <h2>Public privacy and support URLs stay simple.</h2>
           <p>
             Aether Focus does not require an account, does not show ads, and does not collect your
             focus history on our servers.
